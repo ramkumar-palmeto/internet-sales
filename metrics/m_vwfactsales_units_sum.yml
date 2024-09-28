@@ -4,4 +4,3 @@ label: Units
 calculation_method: sum
 column: units
 dataset: vwfactsales
-format: general number

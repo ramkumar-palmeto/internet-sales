@@ -1,11 +1,7 @@
 unique_name: internet_sales
 object_type: model
 label: Internet Sales
-metrics:
-  - unique_name: AverageQuantity
-  - unique_name: AverageSalesAmount
-  - unique_name: TotalQuantity
-  - unique_name: TotalSalesAmount  
+metrics: []
 relationships:
   - unique_name: vwfactsales_customerid_to_customers_fullname
     from:
