@@ -19,7 +19,7 @@ relationships:
   - unique_name: vwstores_locationid_to_geography_city
     from:
       dataset: vwstores
-      hierarchy: Stores
+      hierarchy: ''
       join_columns:
         - locationid
       level: vwstores_empty_attr
