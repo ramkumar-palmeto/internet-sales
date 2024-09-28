@@ -1,0 +1,7 @@
+unique_name: m_vwfactsales_units_sum
+object_type: metric
+label: Units
+calculation_method: sum
+column: units
+dataset: vwfactsales
+format: general number

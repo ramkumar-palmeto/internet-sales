@@ -1,0 +1,69 @@
+unique_name: products
+object_type: dimension
+label: products
+hierarchies:
+  - unique_name: Product Line
+    label: Product Line
+    levels:
+      - unique_name: Category
+      - unique_name: Subcategory
+      - unique_name: Product
+        secondary_attributes:
+          - unique_name: stocklevel
+            label: stocklevel
+            contains_unique_names: false
+            dataset: vwproducts
+            is_unique_key: false
+            key_columns:
+              - stocklevel
+            name_column: stocklevel
+  - unique_name: Color
+    label: Color
+    levels:
+      - unique_name: color
+      - unique_name: size
+level_attributes:
+  - unique_name: Category
+    label: Category
+    contains_unique_names: false
+    dataset: vwproductcategories
+    is_unique_key: false
+    key_columns:
+      - productcategoryid
+    name_column: productcategoryname
+  - unique_name: Subcategory
+    label: Subcategory
+    contains_unique_names: false
+    dataset: vwproductsubcategories
+    is_unique_key: false
+    key_columns:
+      - productcategoryid
+      - productsubcategoryid
+    name_column: productsubcategoryname
+  - unique_name: Product
+    label: Product
+    contains_unique_names: false
+    dataset: vwproducts
+    is_unique_key: false
+    key_columns:
+      - productsubcategoryid
+      - productid
+    name_column: name
+  - unique_name: color
+    label: color
+    contains_unique_names: false
+    dataset: vwproducts
+    is_unique_key: false
+    key_columns:
+      - color
+    name_column: color
+  - unique_name: size
+    label: size
+    contains_unique_names: false
+    dataset: vwproducts
+    is_unique_key: false
+    key_columns:
+      - productid
+      - color
+    name_column: size
+type: standard

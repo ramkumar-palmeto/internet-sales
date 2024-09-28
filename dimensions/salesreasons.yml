@@ -1,0 +1,27 @@
+unique_name: salesreasons
+object_type: dimension
+label: Sales Reasons
+hierarchies:
+  - unique_name: salesreasons Hierarchy
+    label: salesreasons Hierarchy
+    levels:
+      - unique_name: salesreasontype
+      - unique_name: salesreasonname
+level_attributes:
+  - unique_name: salesreasontype
+    label: Reason Type
+    contains_unique_names: false
+    dataset: vwsalesreasons
+    is_unique_key: false
+    key_columns:
+      - salesreasontype
+    name_column: salesreasontype
+  - unique_name: salesreasonname
+    label: Reason
+    contains_unique_names: false
+    dataset: vwsalesreasons
+    is_unique_key: false
+    key_columns:
+      - salesreasonname
+    name_column: salesreasonname
+type: standard

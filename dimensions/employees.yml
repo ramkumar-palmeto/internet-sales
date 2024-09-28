@@ -1,0 +1,43 @@
+unique_name: employees
+object_type: dimension
+label: employees
+hierarchies:
+  - unique_name: employees Hierarchy
+    label: employees Hierarchy
+    levels:
+      - unique_name: Employee
+        secondary_attributes:
+          - unique_name: firstname
+            label: firstname
+            contains_unique_names: false
+            dataset: vwemployees
+            is_unique_key: false
+            key_columns:
+              - firstname
+            name_column: firstname
+          - unique_name: middlename
+            label: middlename
+            contains_unique_names: false
+            dataset: vwemployees
+            is_unique_key: false
+            key_columns:
+              - middlename
+            name_column: middlename
+          - unique_name: lastname
+            label: lastname
+            contains_unique_names: false
+            dataset: vwemployees
+            is_unique_key: false
+            key_columns:
+              - lastname
+            name_column: lastname
+level_attributes:
+  - unique_name: Employee
+    label: Employee
+    contains_unique_names: false
+    dataset: vwemployees
+    is_unique_key: false
+    key_columns:
+      - employeeid
+    name_column: fullname
+type: standard

@@ -1,0 +1,30 @@
+unique_name: stores
+object_type: dimension
+label: stores
+hierarchies:
+  - unique_name: Stores
+    label: Stores
+    levels:
+      - unique_name: storename
+level_attributes:
+  - unique_name: storename
+    label: storename
+    contains_unique_names: false
+    dataset: vwstores
+    is_unique_key: false
+    key_columns:
+      - storeid
+    name_column: storename
+relationships:
+  - unique_name: vwstores_locationid_to_geography_city
+    from:
+      dataset: vwstores
+      hierarchy: Stores
+      join_columns:
+        - locationid
+      level: vwstores_empty_attr
+    to:
+      dimension: geography
+      level: city
+    type: embedded
+type: standard

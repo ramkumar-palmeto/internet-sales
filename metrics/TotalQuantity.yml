@@ -1,0 +1,7 @@
+unique_name: TotalQuantity
+object_type: metric
+label: Total Quantity
+calculation_method: sum
+column: units
+dataset: vwfactsales
+format: general number

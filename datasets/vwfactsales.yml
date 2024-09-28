@@ -1,0 +1,29 @@
+unique_name: vwfactsales
+object_type: dataset
+label: vwfactsales
+columns:
+  - name: saleid
+    data_type: string
+  - name: saledate
+    data_type: int
+  - name: customerid
+    data_type: int
+  - name: employeeid
+    data_type: int
+  - name: storeid
+    data_type: int
+  - name: productid
+    data_type: int
+  - name: units
+    data_type: int
+  - name: saleamount
+    data_type: int
+  - name: salesreasonid
+    data_type: int
+  - name: productcost
+    data_type: int
+  - name: Tax Amount
+    data_type: decimal
+    sql: saleamount * 10 * 0.1
+connection_id: con_postgres_public
+table: vwfactsales

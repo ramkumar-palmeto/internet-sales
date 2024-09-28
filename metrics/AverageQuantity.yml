@@ -1,0 +1,7 @@
+unique_name: AverageQuantity
+object_type: metric
+label: Average Quantity
+calculation_method: average
+column: units
+dataset: vwfactsales
+format: general number

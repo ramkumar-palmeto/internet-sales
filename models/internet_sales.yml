@@ -1,0 +1,65 @@
+unique_name: internet_sales
+object_type: model
+label: Internet Sales
+metrics:
+  - unique_name: AverageQuantity
+  - unique_name: AverageSalesAmount
+  - unique_name: TotalQuantity
+  - unique_name: TotalSalesAmount  
+relationships:
+  - unique_name: vwfactsales_customerid_to_customers_fullname
+    from:
+      dataset: vwfactsales
+      join_columns:
+        - customerid
+    to:
+      dimension: customers
+      level: fullname
+  - unique_name: vwfactsales_employeeid_to_employees_Employee
+    from:
+      dataset: vwfactsales
+      join_columns:
+        - employeeid
+    to:
+      dimension: employees
+      level: Employee
+  - unique_name: vwfactsales_productid_to_products_Product
+    from:
+      dataset: vwfactsales
+      join_columns:
+        - productid
+    to:
+      dimension: products
+      level: Product
+  - unique_name: vwfactsales_productid_to_products_size
+    from:
+      dataset: vwfactsales
+      join_columns:
+        - productid
+    to:
+      dimension: products
+      level: size
+  - unique_name: vwfactsales_saledate_to_time_Date
+    from:
+      dataset: vwfactsales
+      join_columns:
+        - saledate
+    to:
+      dimension: time
+      level: Date
+  - unique_name: vwfactsales_salesreasonid_to_salesreasons_salesreasonname
+    from:
+      dataset: vwfactsales
+      join_columns:
+        - salesreasonid
+    to:
+      dimension: salesreasons
+      level: salesreasonname
+  - unique_name: vwfactsales_storeid_to_stores_storename
+    from:
+      dataset: vwfactsales
+      join_columns:
+        - storeid
+    to:
+      dimension: stores
+      level: storename
